@@ -1,19 +1,10 @@
-    sff53skj    gsdi353itjsldk     
-adflkj      gl    ske       jtis 
-
-sdfieiti    isg       isdihsldsl   sdfieiti        sjdlgksjdgkjsldgkb  fkdsfjksdjf fjskdljhlksirts
-   lskjd        flksj lkjq ijqirj iej sg.    sldkfskdf
-
-
-b                       
-c
-adflkj          glskejtisc
-    c       
-    fkdsfjksdjf         `   vcceee  
-
-ec.  eee        e
-
-a   b     c
-        
-sdfsdgsdgs
-sdfsdfs     dsdhsdh  gsdsdhsdh   hsdhsdhsdgs
+1234	5678
+123	 5678
+123	5678
+1	2	3
+		leading	spaces
+		leading	tabs
+end-with-spaces	   
+mix		   tabs	 and   spaces
+short	line
+a b	c d

@@ -4,24 +4,38 @@ the same tab stops as for detab. When either a tab or a single blank
 would suffice to reach a tab stop, which should be given preference? */
 
 #include <stdio.h>
-#define TABSTOP 4
-#define WASBLANK 0
-#define WASCHAR 1
 
-// UNFINISHED
+#define TABSTOP 4
+
 int main()
 {
-    int i, c, cb, nt, ns, was;
+    int i = 0, c = getchar();
 
-    for (i = 0; (c = getchar()) != EOF; i++) {
+    while (c != EOF) {
         if (c == ' ' || c == '\t') {
-            was = WASBLANK;
-        }
-        else if (was == WASBLANK) {
-            cb += TABSTOP;
-        }
-        else if (cb != 0) {
-            nt = cb / TABSTOP;
+            int end = i;
+
+            while (c != EOF && (c == ' ' || c == '\t')) {
+                if (c == ' ')
+                    end++;
+                else   
+                    end += (TABSTOP - (end % TABSTOP));
+                c = getchar();
+            }
+
+            for (; i / TABSTOP != end / TABSTOP; i += (TABSTOP - (i % TABSTOP))) 
+                putchar('\t');
+            for (; i < end; i++)
+                putchar(' ');
+        } else {
+            putchar(c);
+            if (c == '\n')
+                i = 0;
+            else
+                i++;
+            c = getchar();
+
         }
     }
+
 }

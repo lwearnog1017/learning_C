@@ -29,9 +29,8 @@ int main() {
 
 void untiltabstop() {
     extern int i;
-    int numuntil = TABSTOP - i % TABSTOP;
-    for (int j = 0; j < numuntil; j++) {
+    int numuntil = ((i + TABSTOP) / TABSTOP) * TABSTOP;
+    for (; i < numuntil; i++) {
         putchar(' ');
-        i++;
     }
 }
