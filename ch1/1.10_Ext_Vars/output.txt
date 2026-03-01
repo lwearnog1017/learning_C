@@ -1,35 +1,41 @@
-This 
-program 
-should 
-fold long 
-lines 
-properly 
-and handle 
-tabs	
-and  
-spaces.
+#include <stdio.h>
 
-1234567890 
-abcdefghij 
-12345
 
-Averyveryv
-erylongwor
-dthatneeds
-tobebroken
-becauseite
-xceedsthec
-olumnlimit
-.
+' '
+''
 
-short	
-word	
-test	
-end
+int main() {
 
-Mix of 
-small and 
-extraordin
-arilylongw
-ords mixed 
-together.
+    int a = 5; 
+    int b = 10; 
+
+    printf("Hello world\n"); 
+
+    printf("// this is not a comment\n");
+    printf("/* this is not a comment either */\n");
+
+    char c1 = '/';
+    char c2 = '*';
+    char c3 = '\'';
+    char c4 = '"';
+
+    printf("Escaped quote: \" // still not a comment\n");
+    printf("Escaped backslash: \\ /* not comment */\n");
+
+    
+
+    int x = 100;
+
+     text
+    */
+
+    printf("Mixing // and /* inside string */ still safe\n");
+
+    int y = 20;  int z = 30;
+
+    
+
+    printf("End of program\n");
+
+    return 0;
+}
