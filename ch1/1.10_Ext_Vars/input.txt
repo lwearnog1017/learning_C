@@ -1,4 +1,3 @@
 int main() {
-    return 0;
-}
-// This is still valid.
+    printf("hello"); // comment
+}/*comment*/
