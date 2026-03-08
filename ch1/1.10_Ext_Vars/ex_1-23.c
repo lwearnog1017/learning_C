@@ -20,34 +20,29 @@ int main() {
             state = INSLCOMM;
         else if (state == INSLCOMM && prev == '\n') {
             state = OUT;
-        }
-        else if (state == OUT && prev == '/' && c == '*')
+        } else if (state == OUT && prev == '/' && c == '*')
             state = INMLCOMM;
         else if (state == INMLCOMM && prev == '*' && c == '/') {
             state = OUT;
             c = getchar();
             prev = c;
             c = getchar();
-        }
-        else if (state == OUT && c == '\'') {
+        } else if (state == OUT && c == '\'') {
             state = INSQUOTE;
             putchar(prev);
             prev = c;
             c = getchar();
-        }
-        else if (state == OUT && c == '"') {
+        } else if (state == OUT && c == '"') {
             state = INDQUOTE;
             putchar(prev);
             prev = c;
             c = getchar();
-        }
-        else if (state == INSQUOTE && prev != '\\' && c == '\'') {
+        } else if (state == INSQUOTE && prev != '\\' && c == '\'') {
             state = OUT;
             putchar(prev);
             prev = c;
             c = getchar();
-        }
-        else if (state == INDQUOTE && prev != '\\' && c == '"') {
+        } else if (state == INDQUOTE && prev != '\\' && c == '"') {
             state = OUT;
             putchar(prev);
             prev = c;
