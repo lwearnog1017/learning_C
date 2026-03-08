@@ -1,3 +1,1 @@
-int main() {
-    printf("hello"); // comment
-}/*comment*/
+char* s = "hello \"world\""; // may mark

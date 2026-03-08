@@ -33,7 +33,6 @@ int main() {
             c = getchar();
         } else if (state == INMLCOMM && prev == '*' && c == '/') {
             state = OUT;
-            //c = getchar();
         } else if (state == OUT && c == '\'') {
             state = INSQUOTE;
         } else if (state == OUT && c == '"') {
