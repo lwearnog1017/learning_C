@@ -2,8 +2,6 @@
 errors like unbalanced parantheses, brackets and braces. Don't forget
 about quotes, both single and double, escape sequences, & comments. */
 
-/* APPROACH: if status == OK and the state is */
-
 #include <stdio.h>
 
 #define OK 0
@@ -17,7 +15,6 @@ about quotes, both single and double, escape sequences, & comments. */
 
 #define MAXSTACK 1000
 
-int status = OK;
 int size = 0;
 
 int modifystackandstate(char stack[], char curr);
@@ -45,8 +42,6 @@ int main() {
             state = OUT;
         } else if (state == INDQUOTE && prev != '\\' && c == '"') {
             state = OUT;
-
-            //printf("esc");
         }
 
         if (state == OUT) {
@@ -59,10 +54,6 @@ int main() {
             }
         }
 
-        // prev = c;
-        //printf("%c%d", c, state);
-
-        // check for double backslash
         if ((state == INSQUOTE || state == INDQUOTE) && prev == '\\' && c == '\\') {
             prev = 'a';
         } else {
@@ -70,7 +61,7 @@ int main() {
         }
     }
 
-    if ((state == OUT || state == INSLCOMM) && size == 0) printf("The program is valid.%d", state);
+    if ((state == OUT || state == INSLCOMM) && size == 0) printf("The program is valid.");
     else printf("The program is invalid.");
 }
 
